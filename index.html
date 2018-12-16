@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<script src="//cdn.jsdelivr.net/npm/phaser@3.0.0/dist/phaser.min.js"></script>
-		<script src="build/project.bundle.js" charset="utf-8"></script>
-		<script type="text/javascript">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script src="/phaser.min.js"></script>
+    <script>
         var config = {
             type: Phaser.AUTO,
             width: 800,
             height: 600,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 200 }
+                }
+            },
             scene: {
                 preload: preload,
                 create: create
             }
         };
- 
+
         var game = new Phaser.Game(config);
- 
-        
- 
+
+        function preload() {
+            this.load.setBaseURL('https://labs.phaser.io');
+
+            
+        }
     </script>
-	</body>
+</body>
+
 </html>
