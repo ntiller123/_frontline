@@ -5,8 +5,11 @@ export default class Preloader extends Phaser.Scene {
         super('Preloader');
     }
 
-    function preload() {
+    init() {
+        this.readyCount = 0;
+    }
 
+    preload() {
         //phaser logo
         this.add.image(400, 300, 'logo');
 
@@ -25,10 +28,9 @@ export default class Preloader extends Phaser.Scene {
             text: 'Loading...',
             style: {
                 font: '20px monospace',
-                fill: #ffffff
+                fill: ffffff
             }
         });
-
         loadingText.setOrigin(0.5, 0.5);
 
         //update progress bar
@@ -49,24 +51,18 @@ export default class Preloader extends Phaser.Scene {
         }.bind(this));
 
         //timer to view logo for 3 seconds
-        this.timedEvent = this.time.delayedCsll(3000, this.ready, [], this);
+        this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 
-        //load assets needed in game
-        this.load.image('greenButton1', 'assets/GUI/green_button02.png');
-        this.load.image('greenButton2', 'assets/GUI/green_button03.png');
+        //load game assets
+        this.load.image('greenButton1', 'assets/UI/green_button02.png');
+        this.load.image('greenButton2', 'assets/UI/green_button03.png');
         this.load.image('logo', 'assets/Logo.png');
     }
-};
 
-//initialixe countdown
-init() {
-    this.readyCount = 0;
-};
-
-//go to title scene wheb timers done 
-ready() {
-    this.readyCount++;
-    if (this.readyCount === 2) {
-        this.scene.start('Title');
+    ready() {
+        this.readyCount++;
+        if (this.readyCount === 2) {
+            this.scene.start('Title');
+        }
     }
 };
