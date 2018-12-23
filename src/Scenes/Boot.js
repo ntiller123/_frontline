@@ -1,4 +1,4 @@
-import 'phaser';
+var frontline = frontline() || {};
 
 export default class Boot extends Phaser.Scene {
     constructor() {

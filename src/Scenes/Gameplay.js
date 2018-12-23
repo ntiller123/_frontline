@@ -1,16 +1,18 @@
 import 'phaser';
 
+let Gameplay = new Phaser.Scene('Game');
+
 export default class Scene extends Phaser.Scene {
-	constructor() {
-		super('Game');
-	}
+        constructor() {
+            super('Game');
+        }
 
-	preload() {
-		//load images
-		this.load.image('bg', '/assets/Environment/layer1.png');
+        preload() {
+            //load images
+            this.load.image('bg', '/assets/Environment/layer1.png');
 
-	}
+        }
 
-	create() {
-		//add images
-		this.add.image(0, 0, 'bg').setOrigin(0, 0);
+        create() {
+                //add images
+                this.add.image(0, 0, 'bg').setOrigin(0, 0);
