@@ -1,0 +1,23 @@
+{
+  "name": "_frontline",
+  "version": "1.0.0",
+  "description": "Breakout tank game using Phaser3, HTML5 and javascript.",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntiller123/_frontline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntiller123/_frontline/issues"
+  },
+  "homepage": "https://github.com/ntiller123/_frontline#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
