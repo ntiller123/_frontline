@@ -16,21 +16,19 @@ var config = {
     }
 };
 
-var game = new Phaser.Game(config);
+var game = new Phaser.Game(config),
+    Main = function() {};
 
-function preload() {
-    this.load.image('bg', 'assets/Environment/layer1.png');
-    this.load.image('ground', 'assets/Environment/tanksmap.png');
-    this.load.image('barrier', 'assets/Objects/boxCoinAlt.png');
-}
+Main.prototype = {
 
-function create() {
-    this.game.world.setBounds(0, 0, 800, 600);
+    preload: function() {
+        this.load.image('bg', 'assets/Environment/layer1.png');
+        this.load.image('levelMap', 'assets/Environment/level1.json');
+    },
+    create: function() {
+        game.physics.startSystem(Phaser.Physics.ARCADE);
+    },
+    update: function() {
 
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-
-}
-
-function update() {
-
-}
+    }
+};
