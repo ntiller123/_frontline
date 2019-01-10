@@ -5,12 +5,10 @@ export default class Boot extends Phaser.State {
     }
 
     preload() {
-        this.game.load.json('settings', 'public/config/settings.json');
-        this.load.image('title', 'assets/Title.png');
+        this.load.image('logo', 'assets/Logo.png');
     }
 
     create() {
-        this.game.config.settings = this.game.cache.getJSON('settings');
         this.scene.start('Preloader');
     }
 };
