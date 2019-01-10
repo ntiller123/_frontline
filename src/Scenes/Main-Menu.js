@@ -1,15 +1,15 @@
 import 'phaser';
 
-export default class Options extends Phaser.Scene {
-	constructor() {
-		super('Options');
-	}
+export default class Title extends Phaser.Scene {
+    constructor() {
+        super('Title');
+    }
 
-	preload() {
+    preload() {
+        this.load.image('title', 'assets/Title.png');
+    }
 
-	}
-
-	create() {
-
-	}
+    create() {
+        this.add.image(400, 300, 'title');
+    }
 };
