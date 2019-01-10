@@ -1,4 +1,22 @@
-var game = new Phaser.Game(Config),
+var config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {
+            debug: false,
+            gravity: { y: 200 }
+        }
+    }
+};
+
+var game = new Phaser.Game(config),
     Main = function() {};
 
 Main.prototype = {
