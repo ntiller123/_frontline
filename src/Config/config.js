@@ -1,5 +1,9 @@
-import 'phaser';
+import Phaser from 'phaser.min.js';
 import Boot from '../Scenes/Boot';
+import Splash from '../Scenes/Splash';
+import Menu from '../Scenes/Menu';
+import Settings from '../Scenes/Settings';
+import Gameplay from '../Scenes/Gameplay';
 
 export default {
     type: Phaser.AUTO,

@@ -1,15 +1,15 @@
-import 'phaser';
+import Phaser from 'phaser.min.js';
 
-export default class Options extends Phaser.Scene {
-	constructor() {
-		super('Options');
-	}
+export default class Settings extends Phaser.Scene {
+    constructor() {
+        super('Settings');
+    }
 
-	preload() {
+    preload() {
 
-	}
+    }
 
-	create() {
+    create() {
 
-	}
+    }
 };

@@ -1,3 +1,5 @@
+import Phaser from 'phaser.min.js';
+
 export default class Splash extends Phaser.Scene {
     constructor() {
         super('Splash');
@@ -51,7 +53,7 @@ export default class Splash extends Phaser.Scene {
         //timer to view logo for 3 seconds
         this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 
-        //load game assets
+        //load assets
         this.load.image('greenButton1', 'assets/UI/green_button02.png');
         this.load.image('greenButton2', 'assets/UI/green_button03.png');
         this.load.image('logo', 'assets/Logo.png');

@@ -1,8 +1,8 @@
-import 'phaser';
+import Phaser from 'phaser.min.js';
 
-export default class Title extends Phaser.Scene {
+export default class Menu extends Phaser.Scene {
     constructor() {
-        super('Title');
+        super('Menu');
     }
 
     preload() {
